@@ -8,4 +8,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD ["adk", "web", "--host", "0.0.0.0", "--port", "8000", "azure_portal_agent/agent.py"]
+CMD ["adk", "web", "--host", "0.0.0.0", "--port", "8000", "azure_portal_agent"]
