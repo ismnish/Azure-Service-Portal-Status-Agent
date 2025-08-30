@@ -6,8 +6,6 @@ COPY requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY azure_portal_agent ./azure_portal_agent
+COPY . .
 
-WORKDIR /app/azure_portal_agent
-
-CMD ["adk", "web"]
+CMD ["adk", "web", "--host", "0.0.0.0", "--port", "8000", "azure_portal_agent/agent.py"]
